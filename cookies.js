@@ -55,3 +55,4 @@ var Cookies = function () {
 }();
 
 exports.default = Cookies;
+//# sourceMappingURL=cookies.js.map
