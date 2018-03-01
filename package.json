@@ -1,0 +1,19 @@
+{
+  "name": "js-cookies",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pierrecabriere/js-cookies.git"
+  },
+  "author": "hello@pierrecabriere.fr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pierrecabriere/js-cookies/issues"
+  },
+  "homepage": "https://github.com/pierrecabriere/js-cookies#readme"
+}
