@@ -19,9 +19,10 @@ var Cookies = function () {
     key: "set",
     value: function set(name, value, config) {
       var opts = _extends({
-        source: document,
+        source: null,
         path: '/'
       }, config);
+      opts.source = !opts.source ? document : opts.source;
 
       var c = name + "=" + value + ";";
       if (opts.days) {
@@ -36,17 +37,26 @@ var Cookies = function () {
     }
   }, {
     key: "get",
-    value: function get(name, source) {
-      source = !source ? document : source;
+    value: function get(name, config) {
+      var opts = _extends({
+        source: null
+      }, config);
+      opts.source = !opts.source ? document : opts.source;
+
       var v = source.cookie && source.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
       return v ? v[2] : null;
     }
   }, {
     key: "delete",
-    value: function _delete(name, source) {
+    value: function _delete(name, config) {
+      var opts = _extends({
+        source: null
+      }, config);
+      opts.source = !opts.source ? document : opts.source;
+
       this.set(name, '', {
         days: -1,
-        source: source
+        source: opts.source
       });
     }
   }]);

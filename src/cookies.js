@@ -1,10 +1,11 @@
 export default class Cookies {
   static set(name, value, config) {
     const opts = {
-      source: document,
+      source: null,
       path: '/',
       ...config
     }
+    opts.source = !opts.source ? document : opts.source
 
     let c = name + "=" + value + ";"
     if (opts.days) {
@@ -18,16 +19,27 @@ export default class Cookies {
     (opts.source).cookie = c
   }
 
-  static get(name, source) {
-    source = !source ? document : source
+  static get(name, config) {
+    const opts = {
+      source: null,
+      ...config
+    }
+    opts.source = !opts.source ? document : opts.source
+
     const v = source.cookie && source.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)')
     return v ? v[2] : null
   }
 
-  static delete(name, source) {
+  static delete(name, config) {
+    const opts = {
+      source: null,
+      ...config
+    }
+    opts.source = !opts.source ? document : opts.source
+
     this.set(name, '', {
       days: -1,
-      source
+      source: opts.source
     })
   }
 }
