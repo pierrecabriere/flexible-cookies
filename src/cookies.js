@@ -26,7 +26,7 @@ export default class Cookies {
     }
     opts.source = !opts.source ? document : opts.source
 
-    const v = source.cookie && source.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)')
+    const v = (opts.source).cookie && (opts.source).cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)')
     return v ? v[2] : null
   }
 

@@ -43,7 +43,7 @@ var Cookies = function () {
       }, config);
       opts.source = !opts.source ? document : opts.source;
 
-      var v = source.cookie && source.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
+      var v = opts.source.cookie && opts.source.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
       return v ? v[2] : null;
     }
   }, {
