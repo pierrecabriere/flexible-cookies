@@ -22,7 +22,7 @@ var Cookies = function () {
         source: null,
         path: '/'
       }, config);
-      opts.source = !opts.source ? document : opts.source;
+      if (!opts.source) opts.source = document;
 
       var c = name + "=" + value + ";";
       if (opts.days) {
@@ -41,7 +41,7 @@ var Cookies = function () {
       var opts = _extends({
         source: null
       }, config);
-      opts.source = !opts.source ? document : opts.source;
+      if (!opts.source) opts.source = document;
 
       var v = opts.source.cookie && opts.source.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
       return v ? v[2] : null;
@@ -52,7 +52,7 @@ var Cookies = function () {
       var opts = _extends({
         source: null
       }, config);
-      opts.source = !opts.source ? document : opts.source;
+      if (!opts.source) opts.source = document;
 
       this.set(name, '', {
         days: -1,

@@ -5,7 +5,7 @@ export default class Cookies {
       path: '/',
       ...config
     }
-    opts.source = !opts.source ? document : opts.source
+    if (!opts.source) opts.source = document
 
     let c = name + "=" + value + ";"
     if (opts.days) {
@@ -24,7 +24,7 @@ export default class Cookies {
       source: null,
       ...config
     }
-    opts.source = !opts.source ? document : opts.source
+    if (!opts.source) opts.source = document
 
     const v = (opts.source).cookie && (opts.source).cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)')
     return v ? v[2] : null
@@ -35,7 +35,7 @@ export default class Cookies {
       source: null,
       ...config
     }
-    opts.source = !opts.source ? document : opts.source
+    if (!opts.source) opts.source = document
 
     this.set(name, '', {
       days: -1,
