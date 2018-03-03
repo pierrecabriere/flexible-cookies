@@ -14,4 +14,3 @@ Object.defineProperty(exports, 'Cookies', {
 });
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-//# sourceMappingURL=js-cookies.js.map

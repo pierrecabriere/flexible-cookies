@@ -1,23 +1,30 @@
 {
-  "name": "js-cookies",
+  "name": "flexible-cookies",
   "version": "1.0.0",
-  "description": "",
-  "main": "js-cookies.js",
+  "description": "Flexible tool to manage cookies in javascript",
+  "main": "flexible-cookies.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "babel ./src -d ./ --source-maps",
-    "watch": "babel ./src --watch -d ./ --source-maps"
+    "build": "babel ./src -d ./",
+    "watch": "babel ./src --watch -d ./"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pierrecabriere/js-cookies.git"
+    "url": "git+https://github.com/pierrecabriere/flexible-cookies.git"
   },
+  "keywords": [
+    "javascript",
+    "cookies",
+    "universal",
+    "flexible",
+    "server-rendering"
+  ],
   "author": "hello@pierrecabriere.fr",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/pierrecabriere/js-cookies/issues"
+    "url": "https://github.com/pierrecabriere/flexible-cookies/issues"
   },
-  "homepage": "https://github.com/pierrecabriere/js-cookies#readme",
+  "homepage": "https://github.com/pierrecabriere/flexible-cookies#readme",
   "devDependencies": {
     "babel": "^6.23.0",
     "babel-cli": "^6.26.0",

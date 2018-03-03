@@ -1,1 +1,1 @@
-# js-cookies
+# flexible-cookies

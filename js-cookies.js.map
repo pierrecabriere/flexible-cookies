@@ -1,1 +1,0 @@
-{"version":3,"sources":["src/js-cookies.js"],"names":["default"],"mappings":";;;;;;;;;;;4CAASA,O","file":"js-cookies.js","sourcesContent":["export { default as Cookies } from './cookies'"]}
