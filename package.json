@@ -1,6 +1,6 @@
 {
   "name": "flexible-cookies",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Flexible tool to manage cookies in javascript",
   "main": "flexible-cookies.js",
   "scripts": {
